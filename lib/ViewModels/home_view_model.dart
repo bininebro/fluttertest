@@ -6,6 +6,7 @@ import 'encryption.dart';
 
 class HomeViewModel extends ChangeNotifier {
   DatabaseConnection dataBaseConnection = DatabaseConnection();
+  late List<String> decryptedList;
   Encryption encryption = Encryption();
   HomeViewModel() {
     dataBaseConnection.init();

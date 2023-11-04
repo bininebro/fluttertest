@@ -8,7 +8,7 @@ class DatabaseConnection {
   String table = 'EncryptedTable';
   Future<void> init() async {
     final databasePath = await getDatabasesPath();
-    final path = join(databasePath, 'interviewDB');
+    final path = join(databasePath, 'interviewDatabase');
     _db = await openDatabase(path, version: 1, onCreate: (db, version) {
       db.execute('''
         CREATE TABLE $table (
